@@ -67,10 +67,10 @@ Object.entries(ConverterData).forEach(([key, cat], idx) => {
         }) : null
         function updateAka() {
             if (akaFrom && unit.akaA) {
-                akaFrom.textContent = unit.akaA(inputFrom.valueAsNumber) || '&nbsp;'
+                akaFrom.textContent = unit.akaA(inputFrom.valueAsNumber) || '\u00a0'
             }
             if (akaTo && unit.akaB) {
-                akaTo.textContent = unit.akaB(inputTo.valueAsNumber) || '&nbsp;'
+                akaTo.textContent = unit.akaB(inputTo.valueAsNumber) || '\u00a0'
             }
         }
 
