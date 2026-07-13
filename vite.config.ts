@@ -49,8 +49,7 @@ export default defineConfig({
                 clientsClaim: true,
             },
             devOptions: {
-                enabled: true,
-                type: 'module',
+                enabled: false,
             },
         })
     ],
