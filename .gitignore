@@ -1,0 +1,9 @@
+node_modules/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+.proxyai/
+/dist/
