@@ -1,5 +1,2 @@
 pages_build_output_dir = "./dist"
 name = 'onmetrics'
-
-[build]
-command = "npm ci && npm run build"
