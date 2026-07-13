@@ -8,7 +8,7 @@ export type ConverterDataType = Record<string, {
         formula: string,
         AtoB: (v: number) => number,
         BtoA: (v: number) => number,
-        akaA?: (v: number) => string,
-        akaB?: (v: number) => string,
+        akaA?: (v: number) => string | null,
+        akaB?: (v: number) => string | null,
     }[]
 }>

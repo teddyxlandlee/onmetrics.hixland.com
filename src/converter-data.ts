@@ -37,6 +37,7 @@ export const ConverterData: ConverterDataType = {
         AtoB: v => v / 0.3048,
         BtoA: v => v * 0.3048,
         akaB: v => {
+          if (v === 0) return null
           const floor = Math.floor(v)
           return `即 ${floor}' ${((v - floor) * 12).toFixed(4)}"`
         }
