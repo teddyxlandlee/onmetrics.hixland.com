@@ -35,7 +35,11 @@ export const ConverterData: ConverterDataType = {
         scenario: "房间层高、房屋尺寸、身高（安省常说 5'9\"）",
         formula: "ft = m ÷ 0.3048",
         AtoB: v => v / 0.3048,
-        BtoA: v => v * 0.3048
+        BtoA: v => v * 0.3048,
+        akaB: v => {
+          const floor = Math.floor(v)
+          return `即 ${floor}' ${((v - floor) * 12).toFixed(4)}"`
+        }
       },
       {
         name: "km ↔ mile",

@@ -52,16 +52,35 @@ Object.entries(ConverterData).forEach(([key, cat], idx) => {
             this.dataset.dir = 'AtoB'
             this.type = 'number'
         })
+        const akaFrom = unit.akaA ? addChild(card, document.createElement('div'), function() {
+            this.className = 'aka-desc'
+            this.innerHTML = '&nbsp;'
+        }) : null
         const inputTo = addChild(card, document.createElement('input'), function() {
             this.placeholder = '输入 ' + unit.to
             this.dataset.dir = 'BtoA'
             this.type = 'number'
         })
+        const akaTo = unit.akaB ? addChild(card, document.createElement('div'), function() {
+            this.className = 'aka-desc'
+            this.innerHTML = '&nbsp;'
+        }) : null
+        function updateAka() {
+            if (akaFrom && unit.akaA) {
+                akaFrom.textContent = unit.akaA(inputFrom.valueAsNumber)
+            }
+            if (akaTo && unit.akaB) {
+                akaTo.textContent = unit.akaB(inputTo.valueAsNumber)
+            }
+        }
+
         inputFrom.addEventListener('input', () => {
             inputTo.value = unit.AtoB(inputFrom.valueAsNumber).toFixed(4)
+            updateAka()
         })
         inputTo.addEventListener('input', () => {
             inputFrom.value = unit.BtoA(inputTo.valueAsNumber).toFixed(4)
+            updateAka()
         })
 
         panel.appendChild(card)
