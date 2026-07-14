@@ -230,7 +230,46 @@ export const ConverterData: ConverterDataType = {
         formula: "US = CN - 2（近似）",
         AtoB: v => v - 2,
         BtoA: v => v + 2
-      }
+      },
+      {
+        name: "EU 转 US 女码",
+        from: "EU",
+        to: "US W",
+        scenario: "欧洲/国内鞋码转换为美国女鞋码（参考值，实际以品牌方为准）",
+        formula: "US 女码 ≈ EU 码 - 31.5",
+        AtoB: (v) => v - 31.5,
+        BtoA: (v) => v + 31.5,
+      },
+
+      {
+        name: "cm 转 US 女码",
+        from: "cm",
+        to: "US W",
+        scenario: "脚长转换为美国女鞋码（参考值，实际以品牌方为准）",
+        formula: "US 女码 ≈ (脚长(cm) - 17.5) × 1.5",
+        AtoB: (v) => (v - 17.5) * 1.5,
+        BtoA: (v) => v / 1.5 + 17.5,
+      },
+
+      {
+        name: "EU 转 US 男码",
+        from: "EU",
+        to: "US M",
+        scenario: "欧洲/国内鞋码转换为美国男鞋码（参考值，实际以品牌方为准）",
+        formula: "US 男码 ≈ EU 码 - 33",
+        AtoB: (v) => v - 33,
+        BtoA: (v) => v + 33,
+      },
+
+      {
+        name: "cm 转 US 男码",
+        from: "cm",
+        to: "US M",
+        scenario: "脚长转换为美国男鞋码（参考值，实际以品牌方为准）",
+        formula: "US 男码 ≈ (脚长(cm) - 18) × 1.5",
+        AtoB: (v) => (v - 18) * 1.5,
+        BtoA: (v) => v / 1.5 + 18,
+      },
     ]
   }
 };
