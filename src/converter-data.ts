@@ -232,7 +232,7 @@ export const ConverterData: ConverterDataType = {
         BtoA: v => v + 2
       },
       {
-        name: "EU 转 US 女码",
+        name: "EU ↔ US 女码（鞋子）",
         from: "EU",
         to: "US W",
         scenario: "欧洲/国内鞋码转换为美国女鞋码（参考值，实际以品牌方为准）",
@@ -242,7 +242,7 @@ export const ConverterData: ConverterDataType = {
       },
 
       {
-        name: "cm 转 US 女码",
+        name: "cm ↔ US 女码（鞋子）",
         from: "cm",
         to: "US W",
         scenario: "脚长转换为美国女鞋码（参考值，实际以品牌方为准）",
@@ -252,7 +252,7 @@ export const ConverterData: ConverterDataType = {
       },
 
       {
-        name: "EU 转 US 男码",
+        name: "EU ↔ US 男码（鞋子）",
         from: "EU",
         to: "US M",
         scenario: "欧洲/国内鞋码转换为美国男鞋码（参考值，实际以品牌方为准）",
@@ -262,7 +262,7 @@ export const ConverterData: ConverterDataType = {
       },
 
       {
-        name: "cm 转 US 男码",
+        name: "cm ↔ US 男码（鞋子）",
         from: "cm",
         to: "US M",
         scenario: "脚长转换为美国男鞋码（参考值，实际以品牌方为准）",
